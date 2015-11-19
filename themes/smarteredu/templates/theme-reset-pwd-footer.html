@@ -1,0 +1,71 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='static_content.html'/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+
+<section id="smarteredu-footer" class="landing-section">
+    <section class="footer-container">
+        <div class="row-footer">
+            <div class="column">
+                  <ul>
+                    <li class="footer-title">${_("COMPANY")}</li>
+                    <li><a id="about" href="${marketing_link('ABOUT')}">${_("About Us")}</a></li>
+                    <li><a id="press" href="${marketing_link('CONTACT')}">${_("contact us")}</a></li>
+                    <li><a id="jobs" href="http://www.smarteredu.net/register">${_("join us")}</a></li>
+                    <li><a id="faq" href="${marketing_link('NEWS')}">${_("Website Agreement")}</a></li>
+<%doc>
+                    <li><a id="faq" href="${marketing_link('NEWS')}">${_("Media Release & News")}</a></li>
+</%doc>
+
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="footer-title">${_("support")}</li>
+                    <li><a id="about" href="${marketing_link('ABOUT')}">${_("institution")}</a></li>
+                    <li><a id="contact" href="${marketing_link('CONTACT')}">${_("teacher")}</a></li>
+                    <li><a id="faq" href="${marketing_link('FAQ')}">${_("student")}</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="footer-title">${_("follow us")}</li>
+                    <li><a id="about" href="http://www.weibo.com/5454168010/profile?topnav=1&wvr=6"
+                           target="_blank">${_("weibo")}</a></li>
+                    <li><a id="contact" href="https://www.facebook.com/smarteredu" target="_blank">${_("facebook")}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="footer-title">${_('copyright')}</li>
+                </ul>
+            </div>
+            <div class="column">
+                <a class="app" href="https://itunes.apple.com/en/app/smarteredu/id958413713?l=en&mt=8" target="_blank">
+                    <img src="${static.url('images/app_store_en.svg')}"/>
+                </a>
+            </div>
+            <div class="column">
+                <a class="qr" href="https://itunes.apple.com/en/app/smarteredu/id958413713?l=en&mt=8" target="_blank">
+                    <img src="${static.url('images/qr_en.png')}"/>
+                </a>
+            </div>
+        </div>
+    </section>
+</section>
+<section id="smarteredu-sub-footer" class="landing-section">
+    <section class="footer-container">
+        <div class="row-footer-follow row-7-3">
+            <div class="left-column">
+                ${_("Copyright 2014 SmarterEdu. All rights reserved.")}
+            </div>
+            <div class="right-column">
+                <div>
+                    <img src="${static.url('images/power-edx.png')}" alt="powered-by-edx"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

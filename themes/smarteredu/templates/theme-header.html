@@ -1,0 +1,12 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/navigation.html"/>
+
+## TODO: this will eventually be moved to the Sass
+<%block name="navigation_logo">
+##   <img src="${static.url('themes/smarteredu/images/SmartereduLogo.png')}" height="22" alt="Home Page" />
+  <img class="square" src="${static.url('images/smarteredu-home.png')}" height="22" alt="Home Page" />
+  <img class="flat" src="${static.url('images/smarteredu-home-flat.png')}" height="22" alt="Home Page" />
+</%block>
+
